@@ -5,7 +5,7 @@
 - 環境を構築する人は、ある程度Terraformの知識がある前提です。
 
 ## 説明
-### 以下のリソースが実行したAWSアカウント上で作成されます。
+#### 以下のリソースが実行したAWSアカウント上で作成されます。
 - VPC
 - Subnet
 - Internet Gateway
@@ -17,16 +17,16 @@
 - terraform（v0.12以降）がインストールされている事
 - ~/.aws/credentialが適切に設定されている事
 
-## 推奨
+#### 推奨
 - aws cliがインストールされている事
 
 ## 設定
-### tfstate保存先の設定
-- `terraform/default.tf`を見てください
+#### tfstate保存先の設定
+- [terraform/default.tf](./terraform/default.tf)を見てください
 - 特に、`terraform.backend.s3`の**bucket**,**key**には注意が必要です。
 
-### リソースの設定
-- `terraform/variables.tf`を見てください
+#### リソースの設定
+- [terraform/variables.tf](./terraform/variables.tf)を見てください
 - 特に、vpcのcidr、subnetのcidr、インスタンスタイプ、usersを適切に設定してください。
 
 ## 使い方
